@@ -28,14 +28,20 @@ const ContainerRepo = ({Data}) => {
     <section className="main-container">
       <div className="cards-container">
         {data.items ? (
-        <CardRepo repoName={data.items[0].name}
-          repoLenguage={`Language: ${data.items[0].language}`}
-          repoDescription={data.items[0].description}
-          repoLink={data.items[0].html_url}
-          repoStars={`Stars: ${data.items[0].stargazers_count}`}
-          repoOpenIssues={`Issues: ${data.items[0].open_issues_count}`} />
+          
+          data.items.map((element) => {
+            return(
+            <CardRepo repoName={element.name}
+              repoLenguage={`Language: ${element.language}`}
+              repoDescription={element.description}
+              repoLink={element.html_url}
+              repoStars={`Stars: ${element.stargazers_count}`}
+              repoOpenIssues={`Issues: ${element.open_issues_count}`} 
+            />
+            )
+          })
+          
         ) : (<p>Loading</p>)}
-        {/* {console.log(data.items[0].name)} */}
       </div>
     </section>
   );

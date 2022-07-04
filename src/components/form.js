@@ -20,6 +20,7 @@ const SearchForm = () =>
   const sendForm = (event) => 
   {
     event.preventDefault();
+    
     render(<ContainerRepo Data={formData.repoData}/>);
   }
 
