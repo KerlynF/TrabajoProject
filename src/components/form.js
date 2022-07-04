@@ -20,7 +20,7 @@ const SearchForm = () =>
   const sendForm = (event) => 
   {
     event.preventDefault();
-    
+
     render(<ContainerRepo Data={formData.repoData}/>);
   }
 
@@ -41,7 +41,7 @@ const SearchForm = () =>
           <button className="btn btn-primary" type="submit">Search</button>
         </div>
       </form>
-      {/* <h3>{formData.repoData}</h3> */}
+      
     </Fragment>   
   );
 }
