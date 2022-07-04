@@ -36,7 +36,8 @@ const ContainerRepo = ({Data}) => {
               repoDescription={element.description}
               repoLink={element.html_url}
               repoStars={`Stars: ${element.stargazers_count}`}
-              repoOpenIssues={`Issues: ${element.open_issues_count}`} 
+              repoOpenIssues={`Issues: ${element.open_issues_count}`}
+              
             />
             )
           })

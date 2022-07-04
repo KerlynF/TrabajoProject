@@ -1,11 +1,16 @@
 .cards-container {
+    padding-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
     gap: 26px;
     place-content: center;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
   }
   .product-card {
-    width: 400px;
+    width: 370px;
+    
+    
   }
  
 .product-info div 
