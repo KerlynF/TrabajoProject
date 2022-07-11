@@ -1,13 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
 import SearchForm from './components/form.js';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Contribuitors from '../src/modulos/contribuitors';
 
 function App() {
   return (
     <div className="App">
-      <div className='container mt-5'>
-        <SearchForm/>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<SearchForm/>}/>
+          <Route path='contribuitors' element={<Contribuitors/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

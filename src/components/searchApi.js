@@ -5,19 +5,16 @@ import '../Css/cardRepo.css';
 
 
 
-const numOfRepoPerPage = 6;
+
 
 
 const ContainerRepo = ({Data}) => {
 
-  const Datos = {
-    api:'https://api.github.com',
-    data: Data,
-   }
+  
   const [data, setData] = useState({});
   useEffect(() => {
-    const getInfo = async () => {
-      const infoApi = await GetInfoRep(Datos);
+      const getInfo = async () => {
+      const infoApi = await GetInfoRep(Data);
       console.log(infoApi);
       setData(infoApi);
     }
@@ -31,7 +28,7 @@ const ContainerRepo = ({Data}) => {
           
           data.items.map((element) => {
             return(
-            <CardRepo repoName={element.name}
+              <CardRepo repoName={element.name}
               repoLenguage={`Language: ${element.language}`}
               repoDescription={element.description}
               repoLink={element.html_url}
