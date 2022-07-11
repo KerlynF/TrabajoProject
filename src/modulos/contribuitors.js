@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from "react";
-
-import GetInfoRep from '../modulos/axios';
+import CardContribuitor from "./CardContribuitors";
 import '../Css/cardRepo.css';
 
 const Contribuitors = ({data}) => {
 
-    const [contribuitors, setContribuitors] = useState({});
+    const [contribuitors, setContribuitors] = useState([]);
 
     useEffect(() => {
         const getContribuitorsInfo = async () => {
-            const infoContribuitors = await GetInfoRep(data);
-            setContribuitors(infoContribuitors);
+            const infoContribuitors = await fetch(`${data}?per_page=10`);
+            const infoContribuitorsJson = await infoContribuitors.json();
+            setContribuitors(infoContribuitorsJson);
+            console.log(infoContribuitorsJson);
         }
         getContribuitorsInfo();
     }, [])
@@ -20,7 +21,12 @@ const Contribuitors = ({data}) => {
                 {contribuitors ? ( contribuitors.map((contribuitorElement) => {
                      return(
                         
-                        <h1>Hola</h1>
+                        <CardContribuitor 
+                        urlImage={contribuitorElement.avatar_url}
+                        userNameContribuitor={contribuitorElement.login}
+                        githubProfile={contribuitorElement.html_element}
+                        numberContributions={contribuitorElement.contributions}
+                        />
                     
                     );
                 })
