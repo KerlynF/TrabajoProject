@@ -1,7 +1,8 @@
 import React from "react";
 import '../Css/cardRepo.css';
 
-const CardRepo = ({ repoName, repoLenguage, repoDescription, repoLink, repoStars, repoOpenIssues, contribuitors }) => {
+
+const CardRepo = ({ repoName, repoLenguage, repoDescription, repoLink, repoStars, repoOpenIssues, contribuitors, nameCont}) => {
   return (
     <div className="product-card">
       <div className="product-info">
@@ -11,7 +12,7 @@ const CardRepo = ({ repoName, repoLenguage, repoDescription, repoLink, repoStars
           <p>{repoDescription}</p>
           <p>{repoStars}</p>
           <p>{repoOpenIssues}</p>
-          <p><a href={contribuitors}>Top contribuitors</a></p>
+          <p><a href={contribuitors}>{nameCont}</a></p>
         </div>
       </div>
     </div>
