@@ -5,7 +5,8 @@ import ContainerRepo from "./searchApi";
 const SearchForm = () =>
 {
   const [formData, setFormData] = useState({
-    repoData: ''
+    repoData: '',
+    buttonPressed: false
   });
 
   const handleInputChanges = (event) => 
@@ -20,8 +21,10 @@ const SearchForm = () =>
   const sendForm = (event) => 
   {
     event.preventDefault();
-
-    render(<ContainerRepo Data={formData.repoData}/>);
+    setFormData({
+      ...formData,
+      buttonPressed : true
+    })
   }
 
   return(
@@ -42,6 +45,7 @@ const SearchForm = () =>
               <button className="btn btn-primary" type="submit">Search</button>
             </div>
           </form>
+          {formData.buttonPressed ? <ContainerRepo Data={formData.repoData}/> : null}
       </div>
     </Fragment>   
   );

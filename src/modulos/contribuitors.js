@@ -1,20 +1,23 @@
-import React, {useEffect, useState} from "react";
 import CardContribuitor from "./CardContribuitors";
+import React, {useEffect, useState} from "react";
 import '../Css/cardRepo.css';
+import FetchData from "./useFetch";
+import {useLocation} from 'react-router-dom';
 
-const Contribuitors = ({data}) => {
+const Contribuitors = (data) => {
 
     const [contribuitors, setContribuitors] = useState([]);
-
+    const url = useLocation();
+    console.log(url);
     useEffect(() => {
-        const getContribuitorsInfo = async () => {
-            const infoContribuitors = await fetch(`${data}?per_page=10`);
-            const infoContribuitorsJson = await infoContribuitors.json();
-            setContribuitors(infoContribuitorsJson);
-            console.log(infoContribuitorsJson);
+        const requestData = async () => {
+            const requested = await FetchData(url.state);
+            setContribuitors(requested);
+            //console.log(contribuitors);
         }
-        getContribuitorsInfo();
-    }, [])
+        requestData();
+    },[])
+    
     return(
         <section className="main-container">
             <div className="cards-container">

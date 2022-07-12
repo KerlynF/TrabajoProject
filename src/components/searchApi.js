@@ -14,8 +14,10 @@ const ContainerRepo = ({Data}) => {
       const infoApi = await GetInfoRep(Data);
       console.log(infoApi);
       setData(infoApi);
+      
     }
     getInfo();
+    
   }, [])
 
   return (
@@ -32,7 +34,11 @@ const ContainerRepo = ({Data}) => {
                 repoOpenIssues={`Issues: ${element.open_issues_count}`}
                 contribuitors={'http://localhost:3000/contribuitors'}
                 nameCont={'Top Contribuitors'}
+                key={element.id}
+                pageContribuitors={element.contributors_url}
+                
               />
+              
             )
           })
           
