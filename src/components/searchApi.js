@@ -21,7 +21,7 @@ const ContainerRepo = ({Data}) => {
   }, [])
 
   return (
-    <section className="main-container">
+    <section className="main-container-cards">
       <div className="cards-container">
         {data.items ? (
           data.items.map((element) => {

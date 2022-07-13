@@ -12,14 +12,14 @@
     
 }
 
-.contribuitor-info{
+.contribuitorr-info{
     padding-left: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.contribuitor-info p a{
+.contribuitorr-info p a{
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -27,7 +27,8 @@
     font-weight: bold;
 }
 
-.contribuitor-info p a:hover{
+.contribuitorr-info p:nth-child(1):hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 

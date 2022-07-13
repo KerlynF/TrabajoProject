@@ -8,7 +8,7 @@ const CardContribuitor = ({ urlImage, userNameContribuitor, githubProfile, numbe
       <div className="contribuitor-image">
         <img src={urlImage} alt="Avatar contribuitor"></img>
       </div>
-      <div className="contribuitor-info">
+      <div className="contribuitorr-info">
         <p><a href={githubProfile}>{userNameContribuitor}</a></p>
         <p>{`${numberContributions} Contributions`}</p>
       </div>

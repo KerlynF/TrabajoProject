@@ -4,7 +4,7 @@ import '../Css/cardRepo.css';
 import FetchData from "./useFetch";
 import {useLocation} from 'react-router-dom';
 
-const Contribuitors = (data) => {
+const Contribuitors = () => {
 
     const [contribuitors, setContribuitors] = useState([]);
     const url = useLocation();
@@ -13,8 +13,7 @@ const Contribuitors = (data) => {
         const requestData = async () => {
             const requested = await FetchData(url.state);
             setContribuitors(requested);
-            //console.log(contribuitors);
-        }
+        }   
         requestData();
     },[])
     
@@ -27,7 +26,7 @@ const Contribuitors = (data) => {
                         <CardContribuitor 
                         urlImage={contribuitorElement.avatar_url}
                         userNameContribuitor={contribuitorElement.login}
-                        githubProfile={contribuitorElement.html_element}
+                        githubProfile={contribuitorElement.html_url}
                         numberContributions={contribuitorElement.contributions}
                         />
                     

@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React, {Fragment, useState}from "react";
 import ContainerRepo from "./searchApi";
+import '../Css/cardRepo.css';
 
 const SearchForm = () =>
 {
@@ -29,10 +30,11 @@ const SearchForm = () =>
 
   return(
     <Fragment>
-      <div className='container mt-5'>
-        <h1>Start to search github repos!</h1>
-          <form className="row" onSubmit={sendForm}>
-            <div className="col-md-5">
+      <div className='Main-container'>
+        <div className="title-form-container">
+          <h1>Start to search github repos!</h1>
+          <form className="form-container" onSubmit={sendForm}>
+            <div className="form-input">
               <input 
                 placeholder="Search for a repository" 
                 className="form-control" 
@@ -41,10 +43,11 @@ const SearchForm = () =>
                 onChange={handleInputChanges}
               />
             </div>
-            <div className="col-md-3">
+            <div className="form-button">
               <button className="btn btn-primary" type="submit">Search</button>
             </div>
           </form>
+        </div>
           {formData.buttonPressed ? <ContainerRepo Data={formData.repoData}/> : null}
       </div>
     </Fragment>   

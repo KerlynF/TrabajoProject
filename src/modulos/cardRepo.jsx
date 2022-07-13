@@ -11,18 +11,23 @@ const CardRepo = ({ repoName, repoLenguage, repoDescription, repoLink, repoStars
   return (
     <div className="product-card">  
       <div className="product-info">
-        <div>
+        <div className="product-info-header">
           <p> <a href={repoLink}>{repoName}</a></p>
           <p>{repoLenguage}</p>
+        </div>
+       <div className="product-info-description">
           <p>{repoDescription}</p>
-          <p>{repoStars}</p>
-          <p>{repoOpenIssues}</p>
-          <Link to={`/contribuitors`} 
-                state={
+       </div>
+       <div className="product-info-footer">
+        <p>{repoStars}</p>
+        <p>{repoOpenIssues}</p>
+        <Link to={`/contribuitors`} 
+            state={
                   pageContribuitors
           }>{nameCont}
-          </Link>
-        </div>
+        </Link>
+       </div>
+        
       </div>
     </div>
   );
