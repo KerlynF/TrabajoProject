@@ -21,7 +21,9 @@ const SearchForm = () =>
 
   const sendForm = (event) => 
   {
+    
     event.preventDefault();
+    
     setFormData({
       ...formData,
       buttonPressed : true
