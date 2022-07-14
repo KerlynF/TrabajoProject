@@ -14,7 +14,7 @@ const SearchForm = () =>
   {
      //console.log(event.target.value);
     setFormData({
-      ...formData,
+      
       [event.target.name] : event.target.value
     });
   }

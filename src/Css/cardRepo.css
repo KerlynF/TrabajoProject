@@ -201,14 +201,24 @@
   }
 
 
-@media (max-width: 1355px) {
+@media (max-width: 1500px) {
   .cards-container{
     grid-template-columns: repeat(2, 400px);
   }
 }
 
-@media (max-width: 907px) {
+@media (max-width: 1280px) {
   .cards-container{
     grid-template-columns: repeat(1, 400px);
+  }
+
+  .form-input{
+    width: 300px;
+  }
+}
+
+@media (max-width: 764px ){
+  .title-form-container h1{
+    width: 300px;
   }
 }

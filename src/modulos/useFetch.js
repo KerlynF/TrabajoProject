@@ -3,7 +3,7 @@
 
 const FetchData = async (request) => {
 
-    const requestedData = await fetch(`${request}?per_page=10`);
+    const requestedData = await fetch(`${request.request}?per_page=${request.perpage}`);
     const requestedDataJson = await requestedData.json();
     console.log(requestedDataJson);
 
