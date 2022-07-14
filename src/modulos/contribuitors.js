@@ -72,7 +72,7 @@ const Contribuitors = () => {
                     }
                 ) : (<p> </p>)}
             </div>
-            <button onClick={sendData} className="btn btn-primary" type="submit">Load more</button>
+            <button onClick={sendData} className="button-fetch-more" type="submit">Load more</button>
         </section>
     );
 }

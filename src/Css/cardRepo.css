@@ -222,3 +222,24 @@
     width: 300px;
   }
 }
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-fetch-more {
+  margin-top: 70px;
+  width: 100px;
+  border-radius: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.button-fetch-more:hover{
+  color: white;
+  background-color: black;
+}
