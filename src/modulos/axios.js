@@ -7,7 +7,7 @@ const Datos = {
 
 const GetInfoRep = async (API) => {
 
-    const queryE = 'per_page=6&q=' + encodeURIComponent(API);
+    const queryE = `per_page=${API.number}&q=` + encodeURIComponent(API.api);
     const response = await fetch(`${Datos.api}/search/repositories?${queryE}`);
     const answeJson = await response.json();
 
