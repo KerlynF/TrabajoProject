@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# How to run 
+
+You need to install node and a package manager of node (npm, yarn...) and run in the command line `npm create-react-app` then copy the folder SRC in your working directory 
+
+## installing the dependences
+
+You also need to install react-router-dom V6 or above and boostrap
+
 ## Available Scripts
 
 In the project directory, you can run:
