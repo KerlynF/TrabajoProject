@@ -50,7 +50,7 @@ const SearchForm = () =>
             </div>
           </form>
         </div>
-          {formData.buttonPressed ? <ContainerRepo Data={formData.repoData}/> : null}
+          {formData.buttonPressed ? (formData.repoData ? <ContainerRepo Data={formData.repoData}/> : null) : null}
       </div>
     </Fragment>   
   );
